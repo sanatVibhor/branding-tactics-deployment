@@ -31,14 +31,17 @@ import Home from './Pages/Home'
 import CaseStudy from './Pages/CaseStudy'
 import Navbar from './Components/Navbar'
 
+
 function App() {
   return (
     <>
+     <div className=" border-box bg-[#121212]">
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
       </Routes>
+      </div>
     </>
   )
 }
