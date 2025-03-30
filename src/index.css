@@ -1,33 +1,6 @@
 @import "tailwindcss";
 
-:root {
-    /* Light Mode Colors */
-    --background-color: #ffffff;
-    --text-color: #333333;
-    --secondary-color: #6b7280;
-    --primary-color: #3b82f6;
-    --gradient-start: #f3f4f6;
-    --gradient-end: #e5e7eb;
-    --overlay-background: rgba(255, 255, 255, 0.8);
-  }
-  
-  :root.dark {
-    /* Dark Mode Colors */
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --secondary-color: #9ca3af;
-    --primary-color: #60a5fa;
-    --gradient-start: #374151;
-    --gradient-end: #111827;
-    --overlay-background: rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Global Styles Using CSS Variables */
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-  }
+
 
 body::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Edge */

@@ -8,6 +8,15 @@ export default [
   
   {
     files: ['**/*.{js,jsx}'],
+    theme:{
+      extend: {
+        colors: {
+          brand: {
+            orange: "#FF4B19",
+            yellow: "#FFE11F",
+            teal: "#0DF5D0",
+          },
+    },
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,

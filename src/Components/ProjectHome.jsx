@@ -26,14 +26,12 @@ const ProjectHome = () => {
           <p className="mt-4 text-[#AAAAAA]">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
           </p>
-          <div className="mt-8">
-            <a 
-              href="#" 
-              className="bg-[#FF4B19] text-gray-100 px-5 py-3 font-semibold rounded"
-            >
-              Start Now
-            </a>
-          </div>
+        
+          <div className="mx-auto flex h-30 items-center justify-center cursor-pointer">
+          <button type="button" className="cursor-pointer transtion group flex h-10 w-56 items-center justify-center rounded-full bg-gradient-to-r from-[#FF4B19] to-[#FFE11F] p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-3xl hover:shadow-[#0DF5D0]">
+    <div className="flex h-full w-full items-center justify-center rounded-full bg-[#121212] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-900 group-hover:transition group-hover:duration-300 group-hover:ease-in-out">View in Detail</div>
+  </button>
+</div>
         </div>
       </div>
       <div className="bg-[#1E1E1E] lg:mx-8 lg:flex lg:max-w-5xl Elg:shadow-lg lg:rounded-lg">
@@ -52,14 +50,13 @@ const ProjectHome = () => {
           <p className="mt-4 text-[#AAAAAA]">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
           </p>
-          <div className="mt-8">
-            <a 
-              href="#" 
-              className="bg-[#FF4B19] text-gray-100 px-5 py-3 font-semibold rounded"
-            >
-              Start Now
-            </a>
-          </div>
+        
+          <div className="mx-auto flex h-30 items-center justify-center cursor-pointer">
+          <button type="button" className="cursor-pointer transtion group flex h-10 w-56 items-center justify-center rounded-full bg-gradient-to-r from-[#FF4B19] to-[#FFE11F] p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-3xl hover:shadow-[#0DF5D0]">
+    <div className="flex h-full w-full items-center justify-center rounded-full bg-[#121212] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-900 group-hover:transition group-hover:duration-300 group-hover:ease-in-out">View in Detail</div>
+  </button>
+</div>
+          
         </div>
       </div>
 
