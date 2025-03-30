@@ -3,6 +3,14 @@ import React from 'react'
 const Problems = () => {
   return (
     <>
+    <div className="flex justify-center items-center mt-5">
+            <p className="text-2xl text-[#AAAAAA]">
+             Are you facing
+            </p>
+            <p className="text-3xl text-[#FFFFFF]">
+              These Problems?
+            </p>
+          </div>
     <div className='flex flex-col  justify-center items-center flex-nowrap gap-5 md:flex-row p-5 '>
 
         <div className='bg-[#1E1E1E] p-3 rounded-lg  w-2/3 md:w-1/3  border-[#FFE11F] border-[0.5px] '>

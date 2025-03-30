@@ -2,7 +2,18 @@ import React from 'react'
 
 const BuildingBrandGrid = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center p-4 bg-black">
+    <>
+       <div className=" flex-col text-center justify-center items-center mt-5">
+            <p className="text-2xl text-[#AAAAAA]">
+              A Strategic Approach to
+            </p>
+            <p className="text-3xl text-[#FFFFFF]">
+           Building Brands
+            </p>
+          </div>
+
+    <div className="flex min-h-screen w-full flex-col items-center justify-center p-4 bg-[#121212]">
+      
       <div className="grid w-full grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4">
         {/* 01 - Research-Backed Process */}
         <div className="md:col-span-2 bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-6 text-white">
@@ -47,6 +58,7 @@ const BuildingBrandGrid = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

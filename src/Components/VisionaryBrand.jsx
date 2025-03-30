@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Problems from "./Problems";
 import bgVideo from '/bg-video/bg-video.mp4';
-import { Moon, Sun } from 'lucide-react';
+import {  Moon, Sun } from 'lucide-react';
+import { Link } from 'react-router-dom'
+import Navbar from './Navbar';
+import logo from '../assets/icon.png'
+import LoaderHomePage from './LoaderHomePage';
 
 const clientLogos = [
   "/client logo/logo1.png",
@@ -28,24 +32,40 @@ const clientLogos = [
 
 const VisionaryBrand = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
-
-  // Effect to apply theme to body and html
-  useEffect(() => {
-    const htmlElement = document.documentElement;
-    htmlElement.classList.toggle('dark', isDarkMode);
-    htmlElement.classList.toggle('light', !isDarkMode);
-  }, [isDarkMode]);
-
-  // Theme toggle handler
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+  const [loading, setLoading] = useState(true);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  
+  // Handle video loaded event
+  const handleVideoLoaded = () => {
+    console.log("Video loaded successfully");
+    setVideoLoaded(true);
   };
+  
+  // Effect to handle loading state
+  useEffect(() => {
+    // If video is loaded, set a small delay before hiding loader for smooth transition
+    if (videoLoaded) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+    
+    // Fallback timer in case video load event doesn't fire
+    const fallbackTimer = setTimeout(() => {
+      console.log("Fallback timer triggered");
+      setLoading(false);
+    }, 8000); // Maximum wait time of 8 seconds
+    
+    return () => clearTimeout(fallbackTimer);
+  }, [videoLoaded]);
+
 
   return (
     <div className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-300">
       {/* Theme Toggle Button */}
       <button 
-        onClick={toggleTheme}
+      
         className="fixed top-4 right-4 z-50 p-2 rounded-full 
         bg-white dark:bg-gray-800 
         text-gray-800 dark:text-white 
@@ -61,48 +81,100 @@ const VisionaryBrand = () => {
       </button>
 
       {/* Hero Section with Background Video */}
-      <div className="relative h-screen w-full">
+      <div className="relative h-screen w-full overflow-hidden">
+      {/* Loader */}
+      {loading && (
+        <div className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center">
+          <div className="w-16 h-16 relative">
+            <div className="absolute top-0 left-0 w-full h-full border-4 border-t-teal-400 border-r-orange-500 border-b-purple-500 border-l-yellow-400 rounded-full animate-spin"></div>
+          </div>
+          <p className="mt-4 text-white text-lg">Loading experience...</p>
+        </div>
+      )}
+      
+      {/* Background Video - Hidden until loaded */}
+      <div className={loading ? "invisible" : "visible"}>
         <video 
           autoPlay 
           loop 
           muted 
           playsInline 
+          onLoadedData={handleVideoLoaded}
+          onCanPlayThrough={handleVideoLoaded}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
-        {/* Overlay to darken video */}
-        <div className="absolute inset-0 bg-black opacity-65"></div>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+      </div>
+      
+      {/* Content Container - Hidden until loaded */}
+      <div className={`relative z-10 h-full flex flex-col ${loading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`}>
+        {/* Header with Logo and Case Study Button */}
+        <div className="flex flex-col sm:flex-row justify-between items-center p-4 sm:p-6 w-full">
+          <div className="flex items-center space-x-3 mb-4 sm:mb-0">
+            <img 
+              src={logo} 
+              alt="Branding Tactics Logo" 
+              className="h-8 sm:h-10 w-auto"
+            />
+            <span className="text-white font-bold text-lg sm:text-xl">Branding Tactics</span>
+          </div>
+          
+          <Link to="/CaseStudy">
+            <button className="border border-orange-500 rounded-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-base text-white hover:bg-orange-500/20 transition duration-300">
+              CASE STUDY
+            </button>
+          </Link>
+        </div>
         
-        {/* Hero Content */}
-        <div className="relative z-10 h-full flex flex-col">
-          <div className="flex justify-between text-white p-4">
-            <div className="font-semibold text-light-secondary dark:text-dark-secondary">
-              Branding Tactics
+        <div className="flex-grow flex items-center justify-center">
+          <div className="w-full max-w-6xl px-4">
+            <div className="flex flex-col sm:flex-row sm:justify-end gap-6 sm:gap-8 md:gap-16 mb-6 sm:mb-8 md:mb-12">
+              <div className="text-center">
+                <div className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">100+</div>
+                <div className="text-white text-xs sm:text-sm">Satisfied Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">13k+</div>
+                <div className="text-white text-xs sm:text-sm">Instagram Followers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">5+</div>
+                <div className="text-white text-xs sm:text-sm">Years Experience</div>
+              </div>
             </div>
-            <div>
-              <button className="text-white hover:text-light-primary dark:hover:text-dark-primary transition-colors">
-                Case Study
+            
+   
+            <div className="text-center sm:text-right mb-8 sm:mb-12 md:mb-16">
+              <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Serious Branding for
+                <br className="hidden sm:inline" />
+                <span className="sm:hidden"> </span>
+                Serious Entreprenuers
+              </h1>
+            </div>
+
+            <div className="flex justify-center sm:justify-end md:justify-center">
+              <button className="border border-teal-400 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white hover:bg-teal-400/20 transition duration-300">
+                BOOK A CALL
               </button>
             </div>
           </div>
-          
-          <div className="flex-grow flex items-center justify-center">
-            {/* Hero main content can go here */}
-          </div>
         </div>
       </div>
-
+    </div>
       {/* Trusted By Visionary Brands Section */}
       <div className="flex flex-col justify-center items-center bg-light-background dark:bg-dark-background">
         <div className="flex flex-col w-full">
           <div className="flex justify-center items-center mt-5">
-            <p className="text-2xl text-light-secondary dark:text-dark-secondary mr-2">
+            <p className="text-2xl text-[#AAAAAA]">
               Trusted By
             </p>
-            <p className="text-3xl text-light-text dark:text-dark-text">
+            <p className="text-3xl text-[#FFFFFF]">
               Visionary Brands
             </p>
           </div>
@@ -120,24 +192,11 @@ const VisionaryBrand = () => {
             </div>
           </div>
 
-          <div className="flex justify-center items-center cursor-pointer my-8">
-            <button 
-              type="button" 
-              className="cursor-pointer transition group flex h-10 w-56 items-center justify-center rounded-full 
-              bg-gradient-light dark:bg-gradient-dark 
-              p-[1.5px] text-white 
-              duration-300 hover:shadow-lg"
-            >
-              <div className="flex h-full w-full items-center justify-center rounded-full 
-              bg-white dark:bg-[#121212] 
-              text-light-text dark:text-dark-text 
-              transition duration-300 ease-in-out 
-              group-hover:bg-light-primary dark:group-hover:bg-dark-primary 
-              group-hover:text-white">
-                Let's work together
-              </div>
-            </button>
-          </div>
+          <div className="mx-auto flex h-30 w-screen items-center justify-center cursor-pointer">
+  <button type="button" className="cursor-pointer transtion group flex h-10 w-56 items-center justify-center rounded-full bg-gradient-to-r from-[#0DF5D0] to-[#08EE86] p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-3xl hover:shadow-[#0DF5D0]">
+    <div className="flex h-full w-full items-center justify-center rounded-full bg-[#121212] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-900 group-hover:transition group-hover:duration-300 group-hover:ease-in-out">Let's work together</div>
+  </button>
+</div>
         </div>
       </div>
 

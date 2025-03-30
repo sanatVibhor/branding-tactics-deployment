@@ -13,9 +13,9 @@ import GetInTouch from '../Components/GetInTouch'
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/>
       <LoaderHomePage/>
-      <BookCall/>
+      <BookCall/> */}
    
       <VisionaryBrand />
 
