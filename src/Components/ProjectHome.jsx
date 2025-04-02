@@ -28,9 +28,10 @@ const ProjectHome = () => {
           </p>
         
           <div className="mx-auto flex h-30 items-center justify-center cursor-pointer">
-          <button type="button" className="cursor-pointer transtion group flex h-10 w-56 items-center justify-center rounded-full bg-gradient-to-r from-[#FF4B19] to-[#FFE11F] p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-3xl hover:shadow-[#0DF5D0]">
-    <div className="flex h-full w-full items-center justify-center rounded-full bg-[#121212] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-900 group-hover:transition group-hover:duration-300 group-hover:ease-in-out">View in Detail</div>
-  </button>
+          <button className="cursor-pointer flex items-center justify-center border border-teal-400 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white  hover:bg-teal-400/20 transition duration-300">
+         View in Detail
+           
+          </button>
 </div>
         </div>
       </div>
@@ -52,9 +53,9 @@ const ProjectHome = () => {
           </p>
         
           <div className="mx-auto flex h-30 items-center justify-center cursor-pointer">
-          <button type="button" className="cursor-pointer transtion group flex h-10 w-56 items-center justify-center rounded-full bg-gradient-to-r from-[#FF4B19] to-[#FFE11F] p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-3xl hover:shadow-[#0DF5D0]">
-    <div className="flex h-full w-full items-center justify-center rounded-full bg-[#121212] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-900 group-hover:transition group-hover:duration-300 group-hover:ease-in-out">View in Detail</div>
-  </button>
+          <button className="cursor-pointer flex items-center justify-center border border-teal-400 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white  hover:bg-teal-400/20 transition duration-300">
+            View in Detail
+          </button>
 </div>
           
         </div>
@@ -63,14 +64,10 @@ const ProjectHome = () => {
   
     </div>
     <div className="flex justify-center items-center cursor-pointer my-8 ">
-            <button 
-              type="button" 
-              className="cursor-pointer transition group flex h-10 w-56 items-center justify-center rounded-full bg-gradient-to-r from-[#0DF5D0] to-[#08EE86] p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-3xl hover:shadow-[#0DF5D0]"
-            >
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-[#121212] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-900 group-hover:transition group-hover:duration-300 group-hover:ease-in-out">
-            View All My Work
-              </div>
-            </button>
+    <button className="cursor-pointer flex items-center justify-center border border-teal-400 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white  hover:bg-teal-400/20 transition duration-300">
+            Get Started
+          
+          </button>
           </div>
     </>
   )

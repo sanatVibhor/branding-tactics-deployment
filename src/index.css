@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 body::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Edge */
@@ -11,7 +12,7 @@ body::-webkit-scrollbar {
     white-space: nowrap;
     position: relative;
     width: 100%;
-    background: #121212;
+    
     padding: 20px 0;
   }
   
@@ -26,7 +27,7 @@ body::-webkit-scrollbar {
     width: 7rem;
     height: 7rem; 
     border-radius: 50%;
-    background-color: #AAAAAA;
+
     padding: 0.5rem;
     object-fit: contain;
   }
@@ -41,3 +42,4 @@ body::-webkit-scrollbar {
     }
   }
   
+ 
