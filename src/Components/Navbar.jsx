@@ -20,8 +20,7 @@ const Navbar = () => {
         </div>
         <Link 
           to="/CaseStudy" 
-          className="text-sm font-medium text-white border-2 border-orange-500 rounded-full px-4 py-1 hover:bg-orange-500 transition-colors"
-        >
+          className="text-sm font-medium text-white border-2 border-orange-500 rounded-full px-4 py-1 hover:bg-orange-500 transition-colors cursor-pointer">
           Case Study
         </Link>
       </div>

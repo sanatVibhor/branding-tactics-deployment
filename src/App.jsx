@@ -30,6 +30,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import CaseStudy from './Pages/CaseStudy'
 import Navbar from './Components/Navbar'
+import ProjectShowcase from './Pages/ProjectShowcase'
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
+        <Route path="/CaseStudy/:id" element={<ProjectShowcase />}/>
       </Routes>
       </div>
     </>

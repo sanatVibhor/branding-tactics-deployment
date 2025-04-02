@@ -12,7 +12,7 @@ const BuildingBrandGrid = () => {
             </p>
           </div>
 
-    <div className="flex min-h-screen w-full flex-col items-center justify-center p-4 bg-[#121212]">
+    <div className="flex   w-full flex-col items-center justify-center p-4 bg-[#121212]">
       
       <div className="grid w-full grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4">
         {/* 01 - Research-Backed Process */}

@@ -8,6 +8,7 @@ import VisionaryBrand from '../Components/VisionaryBrand'
 import ProjectHome from '../Components/ProjectHome'
 import About from '../Components/About'
 import GetInTouch from '../Components/GetInTouch'
+import Services from '../Components/Services'
 
 
 const Home = () => {
@@ -20,7 +21,10 @@ const Home = () => {
       <VisionaryBrand />
 
       <BuildingBrandGrid/>
+      <Services/>
+  
       <ProjectHome/>
+
       <About/>
       <GetInTouch/>
       {/* <FooterComponent/> */}

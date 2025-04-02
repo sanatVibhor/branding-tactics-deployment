@@ -31,7 +31,7 @@ const clientLogos = [
 ];
 
 const VisionaryBrand = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [darkMode, setdarkMode] = useState(true);
   const [loading, setLoading] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
   
@@ -40,6 +40,16 @@ const VisionaryBrand = () => {
     console.log("Video loaded successfully");
     setVideoLoaded(true);
   };
+useEffect(()=>{
+    if (darkMode){
+        document.documentElement.classList.add('dark')
+    }else{
+        document.documentElement.classList.remove('dark')
+    }
+},[darkMode])
+  const toggleDarkMode=()=>{
+    setdarkMode(!darkMode)
+  }
   
   // Effect to handle loading state
   useEffect(() => {
@@ -65,15 +75,15 @@ const VisionaryBrand = () => {
     <div className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-300">
       {/* Theme Toggle Button */}
       <button 
-      
-        className="fixed top-4 right-4 z-50 p-2 rounded-full 
+      onClick={toggleDarkMode}
+        className="fixed top-30 right-4 z-50 p-2 rounded-full 
         bg-white dark:bg-gray-800 
         text-gray-800 dark:text-white 
         shadow-light dark:shadow-dark 
         hover:bg-gray-100 dark:hover:bg-gray-700 
         transition-all duration-300"
       >
-        {isDarkMode ? (
+        {darkMode ? (
           <Sun size={24} className="text-yellow-500" />
         ) : (
           <Moon size={24} className="text-indigo-600" />
@@ -125,8 +135,8 @@ const VisionaryBrand = () => {
           </div>
           
           <Link to="/CaseStudy">
-            <button className="border border-orange-500 rounded-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-base text-white hover:bg-orange-500/20 transition duration-300">
-              CASE STUDY
+            <button className=" cursor-pointer border border-orange-500 rounded-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-base text-white hover:bg-orange-500/20 transition duration-300">
+              Case Study
             </button>
           </Link>
         </div>
@@ -158,9 +168,9 @@ const VisionaryBrand = () => {
               </h1>
             </div>
 
-            <div className="flex justify-center sm:justify-end md:justify-center">
-              <button className="border border-teal-400 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white hover:bg-teal-400/20 transition duration-300">
-                BOOK A CALL
+            <div className="flex  justify-center sm:justify-end md:justify-center">
+              <button className="cursor-pointer border border-teal-400 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white hover:bg-teal-400/20 transition duration-300">
+               Book a Call
               </button>
             </div>
           </div>
@@ -168,10 +178,10 @@ const VisionaryBrand = () => {
       </div>
     </div>
       {/* Trusted By Visionary Brands Section */}
-      <div className="flex flex-col justify-center items-center bg-light-background dark:bg-dark-background">
+      <div className="flex flex-col justify-center items-center bg-[#121212] dark:bg-[#121212]">
         <div className="flex flex-col w-full">
-          <div className="flex justify-center items-center mt-5">
-            <p className="text-2xl text-[#AAAAAA]">
+          <div className="flex justify-center items-center mt-10 mb-10">
+            <p className="text-2xl text-[#AAAAAA] ">
               Trusted By
             </p>
             <p className="text-3xl text-[#FFFFFF]">
@@ -179,24 +189,25 @@ const VisionaryBrand = () => {
             </p>
           </div>
 
-          <div className="logo-slider overflow-hidden">
+          <div className="logo-slider overflow-hidden bg-[#DDDDDD] dark:bg-[#121212] ">
             <div className="logo-track">
               {clientLogos.concat(clientLogos).map((logo, index) => (
                 <img 
                   key={index} 
                   src={logo} 
                   alt={`Client Logo ${index + 1}`} 
-                  className="logo inline-block filter brightness-75 dark:brightness-100 grayscale dark:grayscale-0 hover:brightness-100 hover:grayscale-0 transition-all duration-300" 
+                  className="logo inline-block bg-[#F8F8F8] dark:bg-[#AAAAAA] " 
                 />
               ))}
             </div>
           </div>
 
-          <div className="mx-auto flex h-30 w-screen items-center justify-center cursor-pointer">
-  <button type="button" className="cursor-pointer transtion group flex h-10 w-56 items-center justify-center rounded-full bg-gradient-to-r from-[#0DF5D0] to-[#08EE86] p-[1.5px] text-white duration-300 hover:bg-gradient-to-l hover:shadow-3xl hover:shadow-[#0DF5D0]">
+          {/* <div className="mx-auto flex h-30 w-screen items-center justify-center cursor-pointer">
+  <button type="button" className="cursor-pointer transtion group flex h-10 w-56 items-center justify-center rounded-full bg-gradient-to-r from-[#0DF5D0] to-[#08EE86] p-[1.5px] text-white duration-300 hover:bg-gradient-to-l  hover:shadow-3xl hover:shadow-[#0DF5D0]">
     <div className="flex h-full w-full items-center justify-center rounded-full bg-[#121212] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-700 group-hover:to-gray-900 group-hover:transition group-hover:duration-300 group-hover:ease-in-out">Let's work together</div>
   </button>
-</div>
+</div> */}
+
         </div>
       </div>
 
