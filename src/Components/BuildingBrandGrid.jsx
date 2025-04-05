@@ -1,65 +1,208 @@
-import React from 'react'
+import React from 'react';
 
 const BuildingBrandGrid = () => {
   return (
     <>
-       <div className=" flex-col text-center justify-center items-center mt-5">
-            <p className="text-2xl text-[#AAAAAA]">
-              A Strategic Approach to
-            </p>
-            <p className="text-3xl text-[#FFFFFF]">
-           Building Brands
-            </p>
+      <div className="flex-col text-center justify-center items-center mt-10 mb-10">
+        <p className="text-2xl text-[#AAAAAA]">
+          A Strategic Approach to
+        </p>
+        <p className="text-3xl text-[#FFFFFF]">
+          Building Brands
+        </p>
+      </div>
+
+      {/* Mobile view (single column) */}
+      <div className="md:hidden flex w-full flex-col items-center justify-center p-4 bg-[#121212]">
+        <div className="grid w-full grid-cols-1 gap-4">
+          {/* 01 - Research-Backed Process */}
+          <div className="bg-[#1E1E1E] p-4 rounded-lg border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#C517E6] h-6 w-6 rounded-full flex items-center justify-center'>01</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Research-Backed Process
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
+                We dive deep into your business, audience, and competition to craft a strategy that ensures differentiation and market fit.
+              </p>
+            </div>
           </div>
 
-    <div className="flex   w-full flex-col items-center justify-center p-4 bg-[#121212]">
-      
-      <div className="grid w-full grid-cols-1 md:grid-cols-5 md:grid-rows-2 gap-4">
-        {/* 01 - Research-Backed Process */}
-        <div className="md:col-span-2 bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-6 text-white">
-          {/* <div className="absolute top-4 left-4 bg-purple-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">01</div> */}
-          <h2 className="text-xl font-bold mb-4">Research-Backed Process</h2>
-          <p>We dive deep into your business, audience, and competition to craft a strategy that ensures differentiation and market fit.</p>
-        </div>
+          {/* 02 - Founder-First Approach */}
+          <div className="bg-[#1E1E1E] p-4 rounded-lg border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#FF176C] h-6 w-6 rounded-full flex items-center justify-center'>02</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Founder-First Approach
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
+                Your vision is at the core of our process. We align branding with your business goals and audience psychology to create meaningful connections.
+              </p>
+            </div>
+          </div>
 
-        {/* 02 - Founder-First Approach */}
-        <div className="md:col-span-2 bg-gradient-to-br from-red-600 to-red-800 rounded-3xl p-6 text-white">
-          {/* <div className="absolute top-4 left-4 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">02</div> */}
-          <h2 className="text-xl font-bold mb-4">Founder-First Approach</h2>
-          <p>Your vision is at the core of our process. We align branding with your business goals and audience psychology to create meaningful connections.</p>
-        </div>
+          {/* 03 - Relentless Iteration */}
+          <div className="bg-[#1E1E1E] p-4 rounded-lg border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#FF4B19] h-6 w-6 rounded-full flex items-center justify-center'>03</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Relentless Iteration
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
+                Great brands aren't rushed—they're crafted. We refine obsessively, sometimes exploring 1000+ iterations to ensure precision and impact.
+              </p>
+            </div>
+          </div>
 
-        {/* 06 - Messaging & Storytelling */}
-        <div className="md:row-span-2 bg-gradient-to-br from-orange-600 to-orange-800 rounded-3xl p-6 text-white">
-          {/* <div className="absolute top-4 left-4 bg-orange-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">06</div> */}
-          <h2 className="text-xl font-bold mb-4">Messaging & Storytelling</h2>
-          <p>Branding isn't just about looks—it's about how your brand speaks, feels, and connects with your audience. We craft compelling brand messaging that strengthens emotional connection and customer trust—not just visuals.</p>
-        </div>
+          {/* 04 - Rigorous Testing */}
+          <div className="bg-[#1E1E1E] p-4 rounded-lg border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#4B19FF] h-6 w-6 rounded-full flex items-center justify-center'>04</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Rigorous Testing
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
+                We ensure functionality, legibility, and aesthetic excellence through in-depth validation across real-world use cases.
+              </p>
+            </div>
+          </div>
 
-        {/* 03 - Relentless Iteration */}
-        <div className="md:col-span-2 bg-gradient-to-br from-green-600 to-green-800 rounded-3xl p-6 text-white">
-          {/* <div className="absolute top-4 left-4 bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">03</div> */}
-          <h2 className="text-xl font-bold mb-4">Relentless Iteration</h2>
-          <p>Great brands aren't rushed—they're crafted. We refine obsessively, sometimes exploring 1000+ iterations to ensure precision and impact.</p>
-        </div>
+          {/* 05 - Cohesive Brand Systems */}
+          <div className="bg-[#1E1E1E] p-4 rounded-lg border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#E617C5] h-6 w-6 rounded-full flex items-center justify-center'>05</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Cohesive Brand Systems
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
+                Every element, from typography to color, is designed to work seamlessly across all touchpoints.
+              </p>
+            </div>
+          </div>
 
-        {/* 04 - Rigorous Testing */}
-        <div className="md:col-span-1 md:row-span-2 bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-6 text-white">
-          {/* <div className="absolute top-4 left-4 bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">04</div> */}
-          <h2 className="text-xl font-bold mb-4">Rigorous Testing</h2>
-          <p>We ensure functionality, legibility, and aesthetic excellence through in-depth validation across real-world use cases.</p>
-        </div>
-
-        {/* 05 - Cohesive Brand Systems */}
-        <div className="md:col-span-1 md:row-span-2 bg-gradient-to-br from-pink-600 to-pink-800 rounded-3xl p-6 text-white">
-          {/* <div className="absolute top-4 left-4 bg-pink-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold">05</div> */}
-          <h2 className="text-xl font-bold mb-4">Cohesive Brand Systems</h2>
-          <p>Every element, from typography to color, is designed to work seamlessly across all touchpoints.</p>
+          {/* 06 - Messaging & Storytelling */}
+          <div className="bg-[#1E1E1E] p-4 rounded-lg border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#FF8019] h-6 w-6 rounded-full flex items-center justify-center'>06</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Messaging & Storytelling
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
+                Branding isn't just about looks—it's about how your brand speaks, feels, and connects with your audience. We craft compelling brand messaging that strengthens emotional connection and customer trust—not just visuals.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    </>
-  )
-}
 
-export default BuildingBrandGrid
+      {/* Desktop bento grid view */}
+      <div className="hidden md:flex w-full flex-col items-center justify-center p-4 bg-[#121212]">
+        <div className="grid w-full grid-cols-10 grid-rows-2 gap-4">
+          {/* 01 - Research-Backed Process */}
+          <div className="col-span-4 bg-[#1E1E1E] rounded-lg p-4 lg:p-6 border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#C517E6] h-6 w-6 rounded-full flex items-center justify-center'>01</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Research-Backed Process
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA]'>
+                We dive deep into your business, audience, and competition to craft a strategy that ensures differentiation and market fit.
+              </p>
+            </div>
+          </div>
+
+          {/* 02 - Founder-First Approach */}
+          <div className="col-span-4 bg-[#1E1E1E] rounded-lg p-4 lg:p-6 border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#FF176C] h-6 w-6 rounded-full flex items-center justify-center'>02</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Founder-First Approach
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA]'>
+                Your vision is at the core of our process. We align branding with your business goals and audience psychology to create meaningful connections.
+              </p>
+            </div>
+          </div>
+
+          {/* 06 - Messaging & Storytelling */}
+          <div className="col-span-2 row-span-2 bg-[#1E1E1E] rounded-lg p-4 lg:p-6 border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#FF8019] h-6 w-6 rounded-full flex items-center justify-center'>06</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Messaging & Storytelling
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA]'>
+                Branding isn't just about looks—it's about how your brand speaks, feels, and connects with your audience. We craft compelling brand messaging that strengthens emotional connection and customer trust—not just visuals.
+              </p>
+            </div>
+          </div>
+
+          {/* 03 - Relentless Iteration */}
+          <div className="col-span-4 bg-[#1E1E1E] rounded-lg p-4 lg:p-6 border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#FF4B19] h-6 w-6 rounded-full flex items-center justify-center'>03</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Relentless Iteration
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA]'>
+                Great brands aren't rushed—they're crafted. We refine obsessively, sometimes exploring 1000+ iterations to ensure precision and impact.
+              </p>
+            </div>
+          </div>
+
+          {/* 04 - Rigorous Testing */}
+          <div className="col-span-2 row-span-2 bg-[#1E1E1E] rounded-lg p-4 lg:p-6 border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#4B19FF] h-6 w-6 rounded-full flex items-center justify-center'>04</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Rigorous Testing
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA]'>
+                We ensure functionality, legibility, and aesthetic excellence through in-depth validation across real-world use cases.
+              </p>
+            </div>
+          </div>
+
+          {/* 05 - Cohesive Brand Systems */}
+          <div className="col-span-2 row-span-2 bg-[#1E1E1E] rounded-lg p-4 lg:p-6 border-[#FFE11F] border-[0.4px] flex flex-col h-full">
+            <div className='flex justify-start mb-4'>
+              <p className='text-center text-white bg-[#E617C5] h-6 w-6 rounded-full flex items-center justify-center'>05</p>
+            </div>
+            <div className='flex flex-col justify-between flex-grow'>
+              <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
+                Cohesive Brand Systems
+              </h3>
+              <p className='text-center mx-auto text-[#AAAAAA]'>
+                Every element, from typography to color, is designed to work seamlessly across all touchpoints.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default BuildingBrandGrid;

@@ -30,19 +30,23 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import CaseStudy from './Pages/CaseStudy'
 import Navbar from './Components/Navbar'
-import ProjectShowcase from './Pages/ProjectShowcase'
+
+import { CaseStudyProvider } from './context/CaseStudyContext'
+import CaseStudyDetail from './Pages/ProjectShowcase'
 
 
 function App() {
   return (
     <>
      <div className=" border-box bg-[#121212]">
+      <CaseStudyProvider>
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
-        <Route path="/CaseStudy/:id" element={<ProjectShowcase />}/>
+        <Route path="/CaseStudy/:id" element={<CaseStudyDetail />}/>
       </Routes>
+      </CaseStudyProvider>
       </div>
     </>
   )
