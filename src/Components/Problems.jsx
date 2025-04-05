@@ -56,12 +56,12 @@ const Problems = () => {
             </div>
           </div>
         </div>
-
+{/* 
         <div className="flex justify-center md:justify-end lg:justify-center my-10 px-4">
           <button className="cursor-pointer border border-teal-400 rounded-full px-6 py-2 md:px-8 md:py-3 text-sm md:text-base text-white hover:bg-teal-400/20 transition duration-300">
             Let's work Together
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   )

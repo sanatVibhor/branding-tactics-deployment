@@ -74,8 +74,8 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-[#121212] py-16 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-white dark:bg-[#121212]  px-6 md:px-12">
+      {/* <div className="max-w-7xl mx-auto">
       <div className="flex justify-center items-center mt-10 mb-10">
             <p className="text-2xl text-[#AAAAAA] ">
               Trusted By
@@ -89,9 +89,9 @@ const Services = () => {
           {services.map((service, index) => (
             <ServiceItem key={index} service={service.name} icon={service.icon} index={index} />
           ))}
-        </div>
+        </div> */}
         
-        <div className="mt-16 p-8 bg-gray-100 dark:bg-[#1E1E1E] rounded-xl border border-gray-200 dark:border-[#333333] relative overflow-hidden mx-auto lg:w-4/5">
+        <div className=" p-8 bg-gray-100 dark:bg-[#1E1E1E] rounded-xl border border-gray-200 dark:border-[#333333] relative overflow-hidden mx-auto lg:w-4/5">
           <div className="absolute top-0 right-0 h-64 w-64 bg-indigo-500 dark:bg-[#FF4B19] opacity-5 blur-3xl rounded-full"></div>
           <h3 className="text-gray-900 dark:text-[#FFFFFF] text-2xl font-bold mb-3">Ready to transform your brand?</h3>
           <p className="text-gray-600 dark:text-[#AAAAAA] mb-6">Let's work together to build a distinctive brand that resonates with your audience.</p>
@@ -101,7 +101,7 @@ const Services = () => {
           </button>
         </div>
       </div>
-    </div>
+
   );
 };
 

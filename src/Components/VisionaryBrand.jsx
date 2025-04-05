@@ -9,7 +9,7 @@ import LoaderHomePage from './LoaderHomePage';
 
 const clientLogos = [
   "/client logo/logo1.png",
-  "/client logo/logo2.jpg",
+  "/client logo/logo2.png",
   "/client logo/logo3.png",
   "/client logo/logo4.png",
   "/client logo/logo5.png",
@@ -17,14 +17,14 @@ const clientLogos = [
   "/client logo/logo7.png",
   "/client logo/logo8.png",
   "/client logo/logo9.png",
-  "/client logo/logo10.png",
-  "/client logo/logo11.jpeg",
+  "/client logo/logo10.jpeg",
+  "/client logo/logo11.png",
   "/client logo/logo12.png",
   "/client logo/logo13.png",
   "/client logo/logo14.png",
   "/client logo/logo15.png",
   "/client logo/logo16.webp",
-  "/client logo/logo17.png",
+  "/client logo/logo17.jpg",
   "/client logo/logo18.png",
   "/client logo/logo19.png",
   "/client logo/logo20.png",
@@ -74,21 +74,7 @@ useEffect(()=>{
   return (
     <div className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-300">
       {/* Theme Toggle Button */}
-      <button 
-      onClick={toggleDarkMode}
-        className="fixed top-30 right-4 z-50 p-2 rounded-full 
-        bg-white dark:bg-gray-800 
-        text-gray-800 dark:text-white 
-        shadow-light dark:shadow-dark 
-        hover:bg-gray-100 dark:hover:bg-gray-700 
-        transition-all duration-300"
-      >
-        {darkMode ? (
-          <Sun size={24} className="text-yellow-500" />
-        ) : (
-          <Moon size={24} className="text-indigo-600" />
-        )}
-      </button>
+ 
 
       {/* Hero Section with Background Video */}
       <div className="relative h-screen w-full overflow-hidden">
@@ -180,7 +166,7 @@ useEffect(()=>{
       {/* Trusted By Visionary Brands Section */}
       <div className="flex flex-col justify-center items-center bg-[#121212] dark:bg-[#121212]">
         <div className="flex flex-col w-full">
-          <div className="flex justify-center items-center mt-10 mb-10">
+          <div className="flex gap-2 justify-center items-center mt-10 mb-10">
             <p className="text-2xl text-[#AAAAAA] ">
               Trusted By
             </p>

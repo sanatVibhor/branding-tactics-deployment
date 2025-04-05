@@ -19,9 +19,9 @@ const Home = () => {
       <BookCall/> */}
    
       <VisionaryBrand />
-
-      <BuildingBrandGrid/>
       <Services/>
+      <BuildingBrandGrid/>
+ 
   
       <ProjectHome/>
 
