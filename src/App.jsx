@@ -35,6 +35,7 @@ import { CaseStudyProvider } from './context/CaseStudyContext'
 import CaseStudyDetail from './Pages/ProjectShowcase'
 
 
+
 function App() {
   return (
     <>
@@ -45,6 +46,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
         <Route path="/CaseStudy/:id" element={<CaseStudyDetail />}/>
+      
       </Routes>
       </CaseStudyProvider>
       </div>
