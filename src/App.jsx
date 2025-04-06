@@ -30,6 +30,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import CaseStudy from './Pages/CaseStudy'
 import Navbar from './Components/Navbar'
+import FooterComponent from './Components/Footer'
 
 import { CaseStudyProvider } from './context/CaseStudyContext'
 import CaseStudyDetail from './Pages/ProjectShowcase'
@@ -47,6 +48,7 @@ function App() {
         <Route path="/CaseStudy/:id" element={<CaseStudyDetail />}/>
       </Routes>
       </CaseStudyProvider>
+     
       </div>
     </>
   )
