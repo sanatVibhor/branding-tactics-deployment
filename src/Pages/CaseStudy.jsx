@@ -4,7 +4,7 @@ import { useCaseStudyContext } from '../context/CaseStudyContext';
 import { useNavigate } from 'react-router-dom';
 // Uncomment these when you have these components
 // import Navbar from '../Components/Navbar';
-// import FooterComponent from '../Components/Footer';
+import FooterComponent from '../Components/Footer';
 
 const CaseStudy = () => {
   // Get clients data from context
@@ -129,6 +129,7 @@ const CaseStudy = () => {
       
       {/* Uncomment when you have the Footer component */}
       {/* <FooterComponent /> */}
+      <FooterComponent/>
     </div>
   );
 };

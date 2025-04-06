@@ -3,8 +3,8 @@ import { Instagram, Linkedin, Facebook, X } from 'lucide-react'
 
 const FooterComponent = () => {
   return (
-    <footer className=" fixed bottom-0 left-0 right-0 bg-black flex items-center justify-between px-6 py-4">
-      <div className="text-white text-sm">
+    <footer className="bg-black flex flex-col sm:flex-row items-center justify-between px-6 py-4 mt-8">
+      <div className="text-white text-sm mb-3 sm:mb-0">
         Copyright@2024 All rights reserved
       </div>
       <div className="flex space-x-4">

@@ -9,27 +9,20 @@ import ProjectHome from '../Components/ProjectHome'
 import About from '../Components/About'
 import GetInTouch from '../Components/GetInTouch'
 import Services from '../Components/Services'
-
-
 const Home = () => {
   return (
     <div>
       {/* <Navbar/>
       <LoaderHomePage/>
-      <BookCall/> */}
-   
+      <BookCall/> */} 
       <VisionaryBrand />
       <Services/>
-      <BuildingBrandGrid/>
- 
-  
+      <BuildingBrandGrid/> 
       <ProjectHome/>
-
       <About/>
       <GetInTouch/>
-      {/* <FooterComponent/> */}
+      <FooterComponent/> 
     </div>
   )
 }
-
 export default Home
