@@ -4,7 +4,8 @@ import { useCaseStudyContext } from '../context/CaseStudyContext';
 import { useNavigate } from 'react-router-dom';
 // Uncomment these when you have these components
 // import Navbar from '../Components/Navbar';
-import FooterComponent from '../Components/Footer';
+
+import Footer from '../Components/Footer';
 
 const CaseStudy = () => {
   // Get clients data from context
@@ -12,16 +13,16 @@ const CaseStudy = () => {
   const navigate = useNavigate();
 
   const colorVariants = [
-    'bg-purple-500 hover:bg-purple-600',
-    'bg-red-500 hover:bg-red-600',
-    'bg-blue-500 hover:bg-blue-600',
-    'bg-green-500 hover:bg-green-600',
-    'bg-yellow-500 hover:bg-yellow-600',
-    'bg-orange-500 hover:bg-orange-600',
-    'bg-pink-500 hover:bg-pink-600',
-    'bg-indigo-500 hover:bg-indigo-600',
-    'bg-teal-500 hover:bg-teal-600',
-    'bg-cyan-500 hover:bg-cyan-600'
+    'bg-[#C517E6] hover:bg-fuschia-500',
+    'bg-[#0DF5D0] hover:bg-teal-500',
+    'bg-[#08EE86] hover:bg-green-500',
+    'bg-[#FFE11F] hover:bg-yellow-400',
+    'bg-[#FF4B19] hover:bg-orange-500',
+    'bg-[#FF176C] hover:bg-pink-500',
+    'bg-[#C517E6] hover:bg-fuschia-500',
+    'bg-[#0DF5D0] hover:bg-teal-500',
+    'bg-[#08EE86] hover:bg-green-500',
+
   ];
 
   // Function to handle going back to previous page
@@ -84,7 +85,7 @@ const CaseStudy = () => {
               className="bg-gray-800 rounded-xl overflow-hidden shadow-lg flex flex-col transition-transform duration-300 hover:transform hover:scale-105"
             >
               {/* Image Container - Fixed height for consistency */}
-              <div className="h-48 bg-gray-700 flex items-center justify-center p-6">
+              <div className="h-48 bg-[#FFFFFF] flex items-center justify-center p-6">
                 <img 
                   src={client.logoUrl} 
                   alt={`${client.name} Logo`} 
@@ -106,15 +107,15 @@ const CaseStudy = () => {
               </div>
               
               {/* Button Area */}
-              <div className="p-4 pt-0 flex justify-start">
+              <div className="p-4  pt-0 flex justify-start">
                 <Link 
                   to={`/CaseStudy/${client.id}`}
                   className={`
-                    inline-block w-full text-center px-4 py-2 rounded-full 
+                    inline-block  w-2/3 text-center px-4 py-2 rounded-full 
                     transition-all duration-300 
                     border border-transparent
                     ${colorVariants[index % colorVariants.length]}
-                    text-white
+                    text-[#1E1E1E]
                     hover:border-white hover:shadow-lg
                     text-sm font-medium
                   `}
@@ -129,7 +130,7 @@ const CaseStudy = () => {
       
       {/* Uncomment when you have the Footer component */}
       {/* <FooterComponent /> */}
-      <FooterComponent/>
+      <Footer/>
     </div>
   );
 };

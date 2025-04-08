@@ -30,10 +30,10 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import CaseStudy from './Pages/CaseStudy'
 import Navbar from './Components/Navbar'
-import FooterComponent from './Components/Footer'
 
 import { CaseStudyProvider } from './context/CaseStudyContext'
 import CaseStudyDetail from './Pages/ProjectShowcase'
+import TopImageGrid from './Components/bentogrid'
 
 
 
@@ -47,10 +47,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
         <Route path="/CaseStudy/:id" element={<CaseStudyDetail />}/>
-      
+ 
+        <Route path="/check" element={<TopImageGrid />}/>
+ 
       </Routes>
       </CaseStudyProvider>
-     
       </div>
     </>
   )
