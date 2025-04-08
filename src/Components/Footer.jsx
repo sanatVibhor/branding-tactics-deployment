@@ -1,48 +1,41 @@
-import React from 'react'
-import { Instagram, Linkedin, Facebook, X } from 'lucide-react'
+import React from 'react';
+import { Instagram, X, Linkedin, Facebook } from 'lucide-react';
 
-const FooterComponent = () => {
+const Footer = () => {
   return (
-    <footer className="bg-black flex flex-col sm:flex-row items-center justify-between px-6 py-4 mt-8">
-      <div className="text-white text-sm mb-3 sm:mb-0">
-        Copyright@2024 All rights reserved
+    <div className="bg-black text-white py-8 w-full">
+      <div className="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row justify-between items-center">
+        <div className="mb-4 md:mb-0">
+          <p className="text-sm text-gray-300">Copyright@2024| All rights reserved</p>
+        </div>
+        
+        <div className="flex space-x-4">
+          <a 
+            href="https://www.instagram.com/brandingtactics/" 
+            className="bg-gray-700 p-3 rounded-full hover:bg-gray-600 transition duration-300"
+            aria-label="Instagram"
+          >
+            <Instagram size={20} />
+          </a>
+          <a 
+            href="https://x.com/brandingtactics" 
+            className="bg-gray-700 p-3 rounded-full hover:bg-gray-600 transition duration-300"
+            aria-label="X"
+          >
+            <X size={20} />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/rishav-sagar/" 
+            className="bg-gray-700 p-3 rounded-full hover:bg-gray-600 transition duration-300"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={20} />
+          </a>
+       
+        </div>
       </div>
-      <div className="flex space-x-4">
-        <a 
-          href="https://www.instagram.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="bg-gray-700 rounded-full p-2 hover:bg-gray-600 transition-colors"
-        >
-          <Instagram className="text-white" size={20} />
-        </a>
-        <a 
-          href="https://www.x.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="bg-gray-700 rounded-full p-2 hover:bg-gray-600 transition-colors"
-        >
-          <X className="text-white" size={20} />
-        </a>
-        <a 
-          href="https://www.linkedin.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="bg-gray-700 rounded-full p-2 hover:bg-gray-600 transition-colors"
-        >
-          <Linkedin className="text-white" size={20} />
-        </a>
-        <a 
-          href="https://www.facebook.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="bg-gray-700 rounded-full p-2 hover:bg-gray-600 transition-colors"
-        >
-          <Facebook className="text-white" size={20} />
-        </a>
-      </div>
-    </footer>
-  )
-}
+    </div>
+  );
+};
 
-export default FooterComponent
+export default Footer;

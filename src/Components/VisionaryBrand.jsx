@@ -362,7 +362,7 @@ const VisionaryBrand = () => {
         </video>
         
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black opacity-70"></div>
+        {/* <div className="absolute inset-0 bg-black opacity-0"></div> */}
       </div>
       
       {/* Content Container - Hidden until loaded */}
