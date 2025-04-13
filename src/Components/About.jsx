@@ -1,35 +1,39 @@
 import React from 'react';
+import aboutImg from '/about-image.jpg';
 
 const About = () => {
   return (
-    <div className="w-full py-16">
-      <div className="flex justify-center items-center mb-12">
-        <p className="text-3xl text-white">Meet the Strategist Behind the Brand</p>
-      </div>
-      
-      <div className="flex justify-center px-4">
-        <div className="bg-[#1E1E1E] w-full max-w-5xl lg:flex lg:shadow-lg lg:rounded-lg overflow-hidden">
-          <div className="py-12 px-6 lg:w-1/2">
-            <h2 className="text-3xl text-[#AAAAAA] font-bold">
-              Build Your New <span className="text-white">Idea</span>
-            </h2>
-            <p className="mt-4 text-[#AAAAAA]">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
+    <section className="bg-[#121212]">
+      <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <div className="max-w-lg">
+            <h2 className="text-3xl font-extrabold text-[#FFFFFF] sm:text-4xl">Meet the Strategist Behind the Brand</h2>
+            <p className="mt-4 text-[#AAAAAA] text-lg">
+              Hi, I'm Rishav Sagar — a brand strategist and designer based in India. 
+              I work with entrepreneurs and startups to build brands that are clear, 
+              consistent, and easy to connect with. From strategy to design, I help 
+              shape visual identities and messaging that align with your goals and 
+              speak to the right audience. Whether it's a complete rebrand or building 
+              from the ground up, I help turn ideas into brands that feel intentional 
+              and trustworthy.
             </p>
-            
-           
+            <div className="mt-8">
+              <a href="#" className="text-blue-500 hover:text-blue-600 font-medium">
+                Book 1:1 session with me
+                <span className="ml-2">&#8594;</span>
+              </a>
+            </div>
           </div>
-          
-          <div className="lg:w-1/2 h-64 lg:h-auto relative">
+          <div className="mt-12 md:mt-0">
             <img 
-              src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" 
-              className="w-full h-full object-cover"
-              alt="Person working on laptop" 
+              src={aboutImg} 
+              alt="About Us Image" 
+              className="object-cover rounded-lg shadow-md"
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
