@@ -413,9 +413,10 @@ const VisionaryBrand = () => {
             </div>
 
             <div className="flex  justify-center sm:justify-end md:justify-center">
-              <button className="cursor-pointer border border-teal-400 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white hover:bg-teal-400/20 transition duration-300">
+              <a href="https://superprofile.bio/brandingtactics?fbclid=PAZXh0bgNhZW0CMTEAAadatm808cqzeYJghPSCZHEXDihI0qSDc2IodHxWVjWtmlOt-e_eQlOYzn0ESw_aem_i1soeOjRWKYNTb4eaAymlg"> <button className="cursor-pointer border border-teal-400 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-white hover:bg-teal-400/20 transition duration-300">
                Book a Call
-              </button>
+              </button></a>
+             
             </div>
           </div>
         </div>
@@ -433,14 +434,14 @@ const VisionaryBrand = () => {
             </p>
           </div>
 
-          <div className="logo-slider overflow-hidden bg-[#DDDDDD] dark:bg-[#121212] ">
+          <div className="logo-slider  overflow-hidden bg-[#DDDDDD] dark:bg-[#121212] ">
             <div className="logo-track">
               {clientLogos.concat(clientLogos).map((logo, index) => (
                 <img 
                   key={index} 
                   src={logo} 
                   alt={`Client Logo ${index + 1}`} 
-                  className="logo inline-block bg-[#F8F8F8] dark:bg-[#AAAAAA] " 
+                  className="logo  inline-block bg-[#F8F8F8] dark:bg-[#FFFFFF] " 
                 />
               ))}
             </div>
