@@ -211,6 +211,7 @@ import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
 import logo from '../assets/icon.png'
 import LoaderHomePage from './LoaderHomePage';
+import BrandingPopup from './BrandingPopup';
 
 const clientLogos = [
   "/client logo/logo1.png",
@@ -239,7 +240,7 @@ const VisionaryBrand = () => {
   const [darkMode, setdarkMode] = useState(true);
   const [loading, setLoading] = useState(true);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  
+  const [showPopup, setShowPopup] = useState(true);
   // Counter state for animations
   const [clientCount, setClientCount] = useState(0);
   const [followerCount, setFollowerCount] = useState(0);
@@ -331,6 +332,11 @@ const VisionaryBrand = () => {
   };
 
   return (
+    <>
+    <BrandingPopup 
+      isOpen={showPopup} 
+      onClose={() => setShowPopup(false)} 
+    />
     <div className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-300">
       {/* Theme Toggle Button */}
  
@@ -451,6 +457,7 @@ const VisionaryBrand = () => {
 
       <Problems/>
     </div>
+    </>
   );
 };
 
