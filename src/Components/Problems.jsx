@@ -1,74 +1,3 @@
-// import React from 'react'
-
-// const Problems = () => {
-//   return (
-//     <>
-//       <div className='bg-[#DDDDDD] dark:bg-[#121212] px-4 py-8'>
-//         <div className="flex flex-col md:flex-row justify-center items-center gap-2 my-10">
-//           <p className="text-xl md:text-2xl text-[#AAAAAA]">
-//             Are you facing
-//           </p>
-//           <p className="text-2xl md:text-3xl text-[#FFFFFF]">
-//             These Problems?
-//           </p>
-//         </div>
-
-//         <div className='flex flex-col justify-center items-center gap-6 md:flex-row md:flex-wrap lg:flex-nowrap p-4'>
-//           <div className='bg-[#1E1E1E] p-4 rounded-lg w-full sm:w-4/5 md:w-1/3 border-[#FFE11F] border-[0.4px] flex flex-col h-full'>
-//             <div className='flex justify-center mb-4'>
-//               <p className='text-center text-white bg-[#C517E6] h-6 w-6 rounded-full flex items-center justify-center'>1</p>
-//             </div>
-//             <div className='flex flex-col justify-between flex-grow'>
-//               <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
-//                 Lack of Clear Brand Strategy
-//               </h3>
-//               <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
-//                 Most designers focus only on visuals, missing the deeper strategy needed for differentiation.
-//               </p>
-//             </div>
-//           </div>
-
-//           <div className='bg-[#1E1E1E] p-4 rounded-lg w-full sm:w-4/5 md:w-1/3 border-[#FFE11F] border-[0.4px] flex flex-col h-full'>
-//             <div className='flex justify-center mb-4'>
-//               <p className='text-center text-white bg-[#FF176C] h-6 w-6 rounded-full flex items-center justify-center'>2</p>
-//             </div>
-//             <div className='flex flex-col justify-between flex-grow'>
-//               <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
-//                 Inconsistent Brand Identity
-//               </h3>
-//               <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
-//                 Without a cohesive approach, branding becomes fragmented, leading to weak positioning and lost revenue.
-//               </p>
-//             </div>
-//           </div>
-
-//           <div className='bg-[#1E1E1E] p-4 rounded-lg w-full sm:w-4/5 md:w-1/3 border-[#FFE11F] border-[0.4px] flex flex-col h-full'>
-//             <div className='flex justify-center mb-4'>
-//               <p className='text-center text-white bg-[#FF4B19] h-6 w-6 rounded-full flex items-center justify-center'>2</p>
-//             </div>
-//             <div className='flex flex-col justify-between flex-grow'>
-//               <h3 className='text-center mb-3 text-white text-lg md:text-xl font-medium'>
-//                 Superficial, Intuition-Based Design
-//               </h3>
-//               <p className='text-center mx-auto text-[#AAAAAA] max-w-xs'>
-//                 Design without research and strategy lacks clarity, depth, and impact—failing to connect with the right audience.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-// {/* 
-//         <div className="flex justify-center md:justify-end lg:justify-center my-10 px-4">
-//           <button className="cursor-pointer border border-teal-400 rounded-full px-6 py-2 md:px-8 md:py-3 text-sm md:text-base text-white hover:bg-teal-400/20 transition duration-300">
-//             Let's work Together
-//           </button>
-//         </div> */}
-//       </div>
-//     </>
-//   )
-// }
-
-// export default Problems
-
 import React from 'react';
 import { useState, useEffect } from 'react';
 
@@ -121,12 +50,6 @@ const Problems = () => {
         <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #C517E6 0%, transparent 70%)' }}></div>
         <div className="absolute bottom-20 -left-20 w-60 h-60 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #FF176C 0%, transparent 70%)' }}></div>
         
-        {/* Subtle grid pattern overlay */}
-        {/* <div className="absolute inset-0 bg-[#121212] opacity-5" style={{ 
-          backgroundImage: 'linear-gradient(#FFFFFF 1px, transparent 1px), linear-gradient(90deg, #FFFFFF 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }}></div> */}
-        
         <div className="max-w-6xl mx-auto">
           <div className={`flex flex-col md:flex-row justify-center items-center gap-2 my-10 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0 transform translate-y-10'}`}>
             <p className="text-xl md:text-2xl text-[#AAAAAA] relative z-10">
@@ -138,7 +61,8 @@ const Problems = () => {
             </p>
           </div>
 
-          <div className='flex flex-col justify-center items-center gap-8 md:flex-row md:flex-wrap lg:flex-nowrap p-4'>
+          {/* Container with set height */}
+          <div className='flex flex-col justify-center items-stretch gap-8 md:flex-row md:flex-wrap lg:flex-nowrap p-4'>
             {problems.map((problem, index) => (
               <div 
                 key={problem.id}
@@ -148,7 +72,8 @@ const Problems = () => {
                   transform: `translateY(${isVisible ? 0 : 30}px) scale(${hoveredCard === problem.id ? 1.03 : 1})`,
                   transitionDelay: `${index * 150}ms`,
                   boxShadow: hoveredCard === problem.id ? `0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px ${problem.shadow}` : '0 8px 20px rgba(0, 0, 0, 0.15)',
-                  border: hoveredCard === problem.id ? `1.5px solid ${problem.hoverColor}` : '0.4px solid rgba(255, 225, 31, 0.5)'
+                  border: hoveredCard === problem.id ? `1.5px solid ${problem.hoverColor}` : '0.4px solid rgba(255, 225, 31, 0.5)',
+                  minHeight: '320px' // Fixed minimum height for all cards
                 }}
                 onMouseEnter={() => setHoveredCard(problem.id)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -229,9 +154,6 @@ const Problems = () => {
               </div>
             ))}
           </div>
-          
-          {/* Optional action button */}
-      
         </div>
       </div>
     </>

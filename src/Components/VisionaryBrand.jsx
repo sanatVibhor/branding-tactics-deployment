@@ -229,7 +229,7 @@ const clientLogos = [
   "/client logo/logo13.png",
   "/client logo/logo14.png",
   "/client logo/logo15.png",
-  "/client logo/logo16.webp",
+  "/client logo/logo16.png",
   "/client logo/logo17.jpg",
   "/client logo/logo18.png",
   "/client logo/logo19.png",
