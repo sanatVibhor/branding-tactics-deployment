@@ -14,8 +14,8 @@ const ProjectHome = () => {
 
   useEffect(() => {
     // Find the projects with IDs 6 (Acrements) and 7 (Fizmaa)
-    const fizmaaData = clients.find(client => client.id === 7);
-    const acrementsData = clients.find(client => client.id === 6);
+    const fizmaaData = clients.find(client => client.id === 1);
+    const acrementsData = clients.find(client => client.id === 2);
     
     setFizmaaProject(fizmaaData);
     setAcrementsProject(acrementsData);
