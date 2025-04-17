@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 // import Navbar from '../Components/Navbar';
 
 import Footer from '../Components/Footer';
+import { Home } from 'lucide-react'; // Import Home icon from lucide-react
 
 const CaseStudy = () => {
   // Get clients data from context
@@ -22,7 +23,6 @@ const CaseStudy = () => {
     'bg-[#C517E6] hover:bg-fuschia-500',
     'bg-[#0DF5D0] hover:bg-teal-500',
     'bg-[#08EE86] hover:bg-green-500',
-
   ];
 
   // Function to handle going back to previous page
@@ -44,8 +44,9 @@ const CaseStudy = () => {
       {/* Uncomment when you have the Navbar component */}
       {/* <Navbar /> */}
       
-      {/* Go Back Button */}
-      <div className="max-w-7xl mx-auto pt-6 px-6">
+      {/* Navigation Buttons */}
+      <div className="max-w-7xl mx-auto pt-6 px-6 flex justify-between items-center">
+        {/* Go Back Button */}
         <button
           onClick={handleGoBack}
           className="flex items-center text-white bg-gray-800 hover:bg-gray-700 transition-colors duration-300 px-4 py-2 rounded-lg mb-6"
@@ -66,6 +67,15 @@ const CaseStudy = () => {
           </svg>
           Go Back
         </button>
+        
+        {/* Home Button - New Addition */}
+        <Link 
+          to="/" 
+          className="flex items-center text-white bg-gray-800 hover:bg-gray-700 transition-colors duration-300 px-4 py-2 rounded-lg mb-6"
+        >
+          <Home className="h-5 w-5 mr-2" />
+          Home
+        </Link>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 pb-6">
@@ -107,11 +117,11 @@ const CaseStudy = () => {
               </div>
               
               {/* Button Area */}
-              <div className="p-4  pt-0 flex justify-start">
+              <div className="p-4 pt-0 flex justify-start">
                 <Link 
                   to={`/CaseStudy/${client.id}`}
                   className={`
-                    inline-block  w-2/3 text-center px-4 py-2 rounded-full 
+                    inline-block w-2/3 text-center px-4 py-2 rounded-full 
                     transition-all duration-300 
                     border border-transparent
                     ${colorVariants[index % colorVariants.length]}

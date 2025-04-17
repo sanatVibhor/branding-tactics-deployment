@@ -18,7 +18,7 @@ const About = () => {
               and trustworthy.
             </p>
             <div className="mt-8">
-              <a href="#" className="text-blue-500 hover:text-blue-600 font-medium">
+              <a href="https://superprofile.bio/brandingtactics?fbclid=PAZXh0bgNhZW0CMTEAAadatm808cqzeYJghPSCZHEXDihI0qSDc2IodHxWVjWtmlOt-e_eQlOYzn0ESw_aem_i1soeOjRWKYNTb4eaAymlg" className="text-blue-500 hover:text-blue-600 font-medium">
                 Book 1:1 session with me
                 <span className="ml-2">&#8594;</span>
               </a>

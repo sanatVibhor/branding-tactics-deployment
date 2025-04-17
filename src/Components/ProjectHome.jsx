@@ -83,7 +83,7 @@ const ProjectHome = () => {
                 <img 
                   src={fizmaa} 
                   alt={fizmaaProject.name} 
-                  className="w-full h-auto rounded-lg object-cover" 
+                  className="w-full h-auto rounded-lg object-fill" 
                   style={{ maxHeight: '300px' }}
                 />
               </div>

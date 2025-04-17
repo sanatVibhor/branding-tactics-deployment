@@ -54,20 +54,20 @@ const CaseStudyDetail = () => {
   }
 
   const colorClasses = [
-    'bg-yellow-300', 'bg-yellow-900', 'bg-red-950', 'bg-orange-200',
-    'bg-blue-900', 'bg-yellow-400', 'bg-red-600', 'bg-lime-950','bg-blue-800'
+    'bg-red-600', 'bg-[#11262c]','bg-[#162858]','bg-[#8d4010]', 'bg-blue-700', 'bg-lime-950','bg-orange-200',  'bg-[#f9e47d]',
+ 'bg-red-950', 
   ];
   const bgColorClass = colorClasses[(caseStudy.id - 1) % colorClasses.length];
 
   const lightColorClasses = [
     'bg-purple-900', 'bg-red-900', 'bg-blue-900', 'bg-green-900',
-    'bg-yellow-900', 'bg-orange-900', 'bg-pink-900', 'bg-indigo-900'
+    'bg-yellow-800', 'bg-orange-900', 'bg-pink-900', 'bg-indigo-900'
   ];
   const lightBgColorClass = lightColorClasses[(caseStudy.id - 1) % lightColorClasses.length];
 
   const relatedCaseStudies = getRelatedCaseStudies(caseStudy.id, caseStudy.industry);
 
-  const renderImage = (imageUrl, alt, className = "w-full h-full object-cover") => {
+  const renderImage = (imageUrl, alt, className = "w-full h-full object-fill") => {
     return (
       <img 
         src={imageUrl || "/api/placeholder/400/300"}
@@ -116,26 +116,48 @@ const CaseStudyDetail = () => {
         <div className={`${bgColorClass} py-16`}>
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-between mb-6">
-              <Link
-                to="/CaseStudy"
-                className="flex items-center text-white bg-black bg-opacity-30 hover:bg-opacity-50 transition-colors duration-300 px-4 py-2 rounded-lg"
-              >
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-5 w-5 mr-2" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
+              <div className="flex space-x-3">
+                <Link
+                  to="/"
+                  className="flex items-center text-white bg-black bg-opacity-30 hover:bg-opacity-50 transition-colors duration-300 px-4 py-2 rounded-lg"
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M10 19l-7-7m0 0l7-7m-7 7h18" 
-                  />
-                </svg>
-                Back to Case Studies
-              </Link>
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    className="h-5 w-5 mr-2" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" 
+                    />
+                  </svg>
+                  Home
+                </Link>
+                <Link
+                  to="/CaseStudy"
+                  className="flex items-center text-white bg-black bg-opacity-30 hover:bg-opacity-50 transition-colors duration-300 px-4 py-2 rounded-lg"
+                >
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    className="h-5 w-5 mr-2" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18" 
+                    />
+                  </svg>
+                  Back to Case Studies
+                </Link>
+              </div>
             </div>
             
             <div className="md:flex items-center">
@@ -165,7 +187,7 @@ const CaseStudyDetail = () => {
             <div className="md:w-2/3">
               <h2 className="mb-4 text-2xl font-bold">{caseStudy.name} Showcase</h2>
               
-              <div className="grid grid-cols-12 gap-3">
+              <div className="grid grid-cols-12 gap-3 ">
                 <div className="col-span-6 rounded-lg overflow-hidden h-40 bg-blue-950">
                   {renderImage(caseStudy.top1img, "Project showcase")}
                 </div>
@@ -178,7 +200,7 @@ const CaseStudyDetail = () => {
                 </div>
                 
                 <div className="col-span-6">
-                  <div className="rounded-lg overflow-hidden h-32 mb-3 bg-blue-950 flex items-center justify-center">
+                  <div className="rounded-lg overflow-hidden h-32 mb-3 bg-blue-950 flex items-center justify-center ">
                     {renderImage(caseStudy.centerImg, "Project showcase")}
                   </div>
                   
@@ -206,6 +228,30 @@ const CaseStudyDetail = () => {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Contact button section */}
+        <div className="w-full max-w-6xl mx-auto p-6  mt-6 rounded-lg shadow flex justify-center">
+          <a 
+            href='https://superprofile.bio/brandingtactics?fbclid=PAZXh0bgNhZW0CMTEAAadatm808cqzeYJghPSCZHEXDihI0qSDc2IodHxWVjWtmlOt-e_eQlOYzn0ESw_aem_i1soeOjRWKYNTb4eaAymlg' 
+            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-lg flex items-center"
+          >
+            <span>Discuss Your Project</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-5 w-5 ml-2" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M14 5l7 7m0 0l-7 7m7-7H3" 
+              />
+            </svg>
+          </a>
         </div>
 
         {/* Video section with increased height */}
@@ -251,7 +297,7 @@ const CaseStudyDetail = () => {
         )}
       </div>
       
-<Footer/>
+      <Footer/>
     </div>
   );
 };
