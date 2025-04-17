@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/icon.png'
 
-const Navbar = () => {
+export function Navbar(){
   return (
     <div className="w-full h-24 bg-black shadow-md  ">
       <div className="container mx-auto h-full px-4 flex justify-between items-center">
@@ -28,4 +28,3 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
