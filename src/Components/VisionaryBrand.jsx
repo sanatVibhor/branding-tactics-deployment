@@ -3,8 +3,8 @@ import Problems from "./Problems";
 import bgVideo from '/bg-video/bg-video.mp4';
 import {  Moon, Sun } from 'lucide-react';
 import { Link } from 'react-router-dom'
-import Navbar from './Navbar';
-import logo from '/logo.svg'
+import {Navbar}  from './Navbar';
+import logo from '../assets/icon.png'
 import LoaderHomePage from './LoaderHomePage';
 import BrandingPopup from './BrandingPopup';
 

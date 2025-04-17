@@ -29,7 +29,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import CaseStudy from './Pages/CaseStudy'
-import Navbar from './Components/Navbar'
+import {Navbar} from './Components/Navbar'
 
 import { CaseStudyProvider } from './context/CaseStudyContext'
 import CaseStudyDetail from './Pages/ProjectShowcase'
