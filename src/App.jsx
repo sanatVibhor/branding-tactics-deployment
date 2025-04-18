@@ -34,6 +34,8 @@ import {Navbar} from './Components/Navbar'
 import { CaseStudyProvider } from './context/CaseStudyContext'
 import CaseStudyDetail from './Pages/ProjectShowcase'
 import TopImageGrid from './Components/bentogrid'
+import SocialCTAButtons from './Components/CTA'
+
 
 
 
@@ -41,13 +43,14 @@ function App() {
   return (
     <>
      <div className=" border-box bg-[#121212]">
+      <SocialCTAButtons/>
       <CaseStudyProvider>
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />
         <Route path="/CaseStudy/:id" element={<CaseStudyDetail />}/>
- 
+  
         <Route path="/check" element={<TopImageGrid />}/>
  
       </Routes>

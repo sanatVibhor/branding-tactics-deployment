@@ -17,10 +17,18 @@ const GetInTouch = () => {
           we're here to help. Let's discuss your vision and create
           something impactful together!
         </p>
-        
+{/*         
         <button className="bg-white text-black px-6 py-3 font-medium flex items-center mx-auto">
           LET'S TALK <span className="ml-2">→</span>
-        </button>
+        </button> */}
+           <div className="flex justify-center mt-8">
+            <a href="https://superprofile.bio/brandingtactics?fbclid=PAZXh0bgNhZW0CMTEAAadatm808cqzeYJghPSCZHEXDihI0qSDc2IodHxWVjWtmlOt-e_eQlOYzn0ESw_aem_i1soeOjRWKYNTb4eaAymlg">
+            <button  className=" cursor-pointer border border-orange-500 rounded-full px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-base text-white hover:bg-orange-500/20 transition duration-300">
+            Get In Touch
+            </button>
+            </a>
+        
+        </div>
       </div>
       
       {/* Footer section */}
