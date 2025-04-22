@@ -21,7 +21,7 @@ export default function FloatingSocialButtons() {
         `}
         onMouseEnter={() => setHoveredButton('whatsapp')}
         onMouseLeave={() => setHoveredButton(null)}
-        onClick={() => window.open('https://wa.me/your-number-here', '_blank')}
+        onClick={() => window.open('https://wa.me/+918789814834', '_blank')}
       >
         <MessageCircle className="w-6 h-6 flex-shrink-0" />
         <span className={`ml-2 whitespace-nowrap font-medium transition-opacity duration-300 ${hoveredButton === 'whatsapp' ? 'opacity-100' : 'opacity-0 absolute'}`}>
@@ -44,7 +44,7 @@ export default function FloatingSocialButtons() {
         `}
         onMouseEnter={() => setHoveredButton('instagram')}
         onMouseLeave={() => setHoveredButton(null)}
-        onClick={() => window.open('https://instagram.com/your-username', '_blank')}
+        onClick={() => window.open('https://instagram.com/brandingtactics', '_blank')}
       >
         <Instagram className="w-6 h-6 flex-shrink-0" />
         <span className={`ml-2 whitespace-nowrap font-medium transition-opacity duration-300 ${hoveredButton === 'instagram' ? 'opacity-100' : 'opacity-0 absolute'}`}>

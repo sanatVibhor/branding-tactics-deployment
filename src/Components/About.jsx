@@ -17,7 +17,7 @@ const About = () => {
               from the ground up, I help turn ideas into brands that feel intentional 
               and trustworthy.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 text-2xl">
               <a href="https://superprofile.bio/brandingtactics?fbclid=PAZXh0bgNhZW0CMTEAAadatm808cqzeYJghPSCZHEXDihI0qSDc2IodHxWVjWtmlOt-e_eQlOYzn0ESw_aem_i1soeOjRWKYNTb4eaAymlg" className="text-blue-500 hover:text-blue-600 font-medium">
                 Book 1:1 session with me
                 <span className="ml-2">&#8594;</span>
